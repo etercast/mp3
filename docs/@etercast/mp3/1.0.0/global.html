@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global</title>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+  <div id="main">
+    <aside>
+      <nav>
+        <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Encoder.html">Encoder</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Encoder.html#.create">create</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Encoder.html#close">close</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Encoder.html#encode">encode</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-typedef">T</span><span class="nav-item-name"><a href="global.html#EncoderOptions">EncoderOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#instantiate">instantiate</a></span></li>
+      </nav>
+    </aside>
+    <main>
+      
+
+
+
+
+
+<section>
+
+  <header>
+    
+      <h2>
+        
+        
+        
+      </h2>
+      
+    
+  </header>
+
+  <article>
+    <div class="container-overview">
+    
+      
+
+      
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+      
+    
+    </div>
+
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      <h3 class="subsection-title">Methods</h3>
+
+      
+        <div class="section-method">
+
+  
+
+  <h4 class="name" id="instantiate">
+    <span class="type-signature"></span>instantiate<span class="signature">(wasm<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+  </h4>
+
+  
+
+
+
+  <div class="description">
+    <p>Loads the <code>mp3.wasm</code> and returns the main class <code>Encoder</code>.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line1">line 1</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="parameters-title">Parameters:</h5>
+    
+
+<table class="params">
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+      <th>Attributes</th>
+      
+
+      
+      <th>Default</th>
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      
+        <tr>
+          
+            <td class="name"><code>wasm</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      string
+    </code>
+  </span>
+  |
+
+  <span class="param-type">
+    <code>
+      URL
+    </code>
+  </span>
+  |
+
+  <span class="param-type">
+    <code>
+      Request
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+          <td class="attributes">
+            
+              &lt;optional&gt;
+            
+
+            
+
+            
+          </td>
+          
+
+          
+          <td class="default">
+            
+              'mp3.wasm'
+            
+          </td>
+          
+
+          <td class="description last">
+            <p>WASM file URL.</p>
+            
+          </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+  
+        
+<div class="param-desc">
+  <p>Promise&lt;class Encoder|Error&gt;</p>
+</div>
+
+
+
+
+
+    
+</div>
+
+
+
+</div>
+
+      
+    
+
+    
+    
+      <h3 class="subsection-title">Type Definitions</h3>
+
+      
+        
+          <div class="section-method">
+
+  
+
+  <h4 class="name" id="EncoderOptions">
+    <span class="type-signature"></span>EncoderOptions<span class="signature">()</span><span class="type-signature"></span>
+  </h4>
+
+  
+
+
+
+  <div class="description">
+    <p>MP3 encoder options</p>
+  </div>
+
+
+
+
+  <h5 class="subsection-title">Properties:</h5>
+  
+
+<table class="props">
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      
+        <tr>
+          
+            <td class="name"><code>sampleRate</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last"><p>Input/output sample rate. Usually this is the value from an AudioContext.</p></td>
+        </tr>
+
+        
+
+    
+      
+        <tr>
+          
+            <td class="name"><code>numChannels</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last"><p>Number of input/output channels. MP3 supports 1 (mono) or 2 (stereo) channels</p></td>
+        </tr>
+
+        
+
+    
+      
+        <tr>
+          
+            <td class="name"><code>quality</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last"><p>Encoding quality (0 - lowest, 9 - highest).
+In VBR (Variable Bit-Rate) this quality indicates an average kbps but in
+CBR (Constant Bit-Rate) 0 is equal to 32kbps and 9 is equal to 320kbps.</p></td>
+        </tr>
+
+        
+
+    
+      
+        <tr>
+          
+            <td class="name"><code>samples</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last"><p>Number of samples that will be encoded each time <code>encode</code> is called.</p></td>
+        </tr>
+
+        
+
+    
+      
+        <tr>
+          
+            <td class="name"><code>mode</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      EncoderMode
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last"><p>Encoding mode (0 - CBR, 1 - VBR).</p></td>
+        </tr>
+
+        
+
+    
+    </tbody>
+</table>
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line112">line 112</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      Object
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+        
+      
+    
+
+    
+  </article>
+
+</section>
+
+
+
+
+    </main>
+  </div>
+  <footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using <a href="https://github.com/etercast/jsdoc-template">Etercast Template</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encoder</title>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+  <div id="main">
+    <aside>
+      <nav>
+        <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Encoder.html">Encoder</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Encoder.html#.create">create</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Encoder.html#close">close</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Encoder.html#encode">encode</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-typedef">T</span><span class="nav-item-name"><a href="global.html#EncoderOptions">EncoderOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#instantiate">instantiate</a></span></li>
+      </nav>
+    </aside>
+    <main>
+      
+
+
+
+
+
+<section>
+
+  <header>
+    
+      <h2>
+        
+        Encoder
+        
+      </h2>
+      
+        <div class="class-description"><p>Not exported by default in the module, you need
+to call <code>instantiate</code> to retrieve this class.</p></div>
+      
+    
+  </header>
+
+  <article>
+    <div class="container-overview">
+    
+      <div class="section-method">
+
+  
+    <h2>Constructor</h2>
+  
+
+  <h4 class="name" id="Encoder">
+    <span class="type-signature"></span>new Encoder<span class="signature">(options)</span><span class="type-signature"></span>
+  </h4>
+
+  
+
+
+
+  <div class="description">
+    <p>Internally this calls the exported method <code>mp3_create</code> to
+make WASM module create a new structure to hold all the LAME
+encoding data. It also calls <code>mp3_init</code> to establish encoder
+options like number of channels, quality, sampleRate, etc.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line160">line 160</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="parameters-title">Parameters:</h5>
+    
+
+<table class="params">
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      
+        <tr>
+          
+            <td class="name"><code>options</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      <a href="global.html#EncoderOptions">EncoderOptions</a>
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last">
+            
+            
+          </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-examples">
+  <h5>Example</h5>
+  
+  
+  <pre class="prettyprint"><code>import instantiate from '@etercast/mp3'
+
+const Encoder = await instantiate()
+const encoder = new Encoder(encoderOptions)
+encoder.encode(leftChannelData, rightChannelData)
+encoder.close()</code></pre>
+
+
+</div>
+
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      <h3 class="subsection-title">Members</h3>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="error">
+    <span class="type-signature"></span>error<span class="type-signature"> :null|Error</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Error</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line209">line 209</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Types:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      null
+    </code>
+  </span>
+  |
+
+  <span class="param-type">
+    <code>
+      Error
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="inputChannels">
+    <span class="type-signature"></span>inputChannels<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Input number of channels (1 - mono, 2 - stereo)</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line265">line 265</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="inputSampleRate">
+    <span class="type-signature"></span>inputSampleRate<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Input sample rate</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line257">line 257</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="inputSamples">
+    <span class="type-signature"></span>inputSamples<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Input samples</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line249">line 249</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="isClosed">
+    <span class="type-signature"></span>isClosed<span class="type-signature"> :boolean</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Indicates that the encoder is running.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line281">line 281</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      boolean
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="isRunning">
+    <span class="type-signature"></span>isRunning<span class="type-signature"> :boolean</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Indicates that the encoder is running.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line273">line 273</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      boolean
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="outputBufferMaxSize">
+    <span class="type-signature"></span>outputBufferMaxSize<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Max. output buffer size.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line225">line 225</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="outputBufferSize">
+    <span class="type-signature"></span>outputBufferSize<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Current output buffer size.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line217">line 217</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="outputQuality">
+    <span class="type-signature"></span>outputQuality<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Output quality</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line241">line 241</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="outputSampleRate">
+    <span class="type-signature"></span>outputSampleRate<span class="type-signature"> :number</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Output sample rate</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line233">line 233</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      number
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+          <div class="section-members">
+  <h4 class="name" id="state">
+    <span class="type-signature"></span>state<span class="type-signature"> :EncoderState</span>
+  </h4>
+
+
+
+
+  <div class="description">
+    <p>Encoder state</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line201">line 201</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+<section class="types">
+  <h5 class="type-title">
+    
+      Type:
+    
+  </h5>
+  <ul class="type-list">
+    <li class="type-list-item">
+      
+  <span class="param-type">
+    <code>
+      EncoderState
+    </code>
+  </span>
+  
+
+
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
+</div>
+
+      
+    
+
+    
+    
+      <h3 class="subsection-title">Methods</h3>
+
+      
+        <div class="section-method">
+
+  
+
+  <h4 class="name" id=".create">
+    <span class="type-signature">(static) </span>create<span class="signature">(options)</span><span class="type-signature"> &rarr; {<a href="Encoder.html">Encoder</a>}</span>
+  </h4>
+
+  
+
+
+
+  <div class="description">
+    <p>Creates a new MP3 encoder. This is equivalent to calling
+the constructor using the <code>new</code> keyword. It's useful
+if you need a function that instantiates the Encoder.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line149">line 149</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="parameters-title">Parameters:</h5>
+    
+
+<table class="params">
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      
+        <tr>
+          
+            <td class="name"><code>options</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      <a href="global.html#EncoderOptions">EncoderOptions</a>
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+
+          
+
+          <td class="description last">
+            
+            
+          </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+  
+        
+
+
+<dl class="param-type">
+  <dt>
+    Type:
+  </dt>
+  <dd>
+    
+  <span class="param-type">
+    <code>
+      <a href="Encoder.html">Encoder</a>
+    </code>
+  </span>
+  
+
+
+  </dd>
+</dl>
+
+
+
+    
+</div>
+
+
+
+<div class="section-examples">
+  <h5>Example</h5>
+  
+  
+  <pre class="prettyprint"><code>import instantiate from '@etercast/mp3'
+
+const Encoder = await instantiate()
+const encoder = Encoder.create(encoderOptions)</code></pre>
+
+
+</div>
+
+</div>
+
+      
+        <div class="section-method">
+
+  
+
+  <h4 class="name" id="close">
+    <span class="type-signature"></span>close<span class="signature">()</span><span class="type-signature"></span>
+  </h4>
+
+  
+
+
+
+  <div class="description">
+    <p>Closes the encoder. After this method any call to <code>encode</code>
+will throw an Error. If you need to append more data after
+closing an encoder you can instantiate a new Encoder and then
+concatenate all the new data with the old data.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line363">line 363</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-examples">
+  <h5>Example</h5>
+  
+  
+  <pre class="prettyprint"><code>import instantiate from '@etercast/mp3'
+
+const Encoder = await instantiate()
+const encoder = new Encoder()
+
+// Do something with the encoder...
+
+encoder.close()
+
+// `encoder` is no longer usable and all the
+// memory reserved is freed.</code></pre>
+
+
+</div>
+
+</div>
+
+      
+        <div class="section-method">
+
+  
+
+  <h4 class="name" id="encode">
+    <span class="type-signature"></span>encode<span class="signature">(left, right<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Uint8Array}</span>
+  </h4>
+
+  
+
+
+
+  <div class="description">
+    <p>Encodes raw Float 32-bit audio data into MP3 frames. An MP3
+frame consist of a header and payload, this makes MP3 streamable
+and implies that you can merge two files easily by concatenating them.</p>
+<p>If you need to merge two channels then you should use a <code>ChannelMergeNode</code>
+and then reencode the audio.</p>
+  </div>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <dt class="tag-source">Source:</dt>
+  <dd class="tag-source"><ul class="dummy"><li>
+      <a href="mp3.js.html">mp3.js</a>, <a href="mp3.js.html#line321">line 321</a>
+  </li></ul></dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="parameters-title">Parameters:</h5>
+    
+
+<table class="params">
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+      <th>Attributes</th>
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      
+        <tr>
+          
+            <td class="name"><code>left</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      Float32Array
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+          
+
+          
+
+          <td class="description last">
+            <p>Left channel (mono)</p>
+            
+          </td>
+        </tr>
+
+    
+      
+        <tr>
+          
+            <td class="name"><code>right</code></td>
+          
+
+          <td class="type">
+          
+            
+  <span class="param-type">
+    <code>
+      Float32Array
+    </code>
+  </span>
+  
+
+
+          
+          </td>
+
+          
+          <td class="attributes">
+            
+              &lt;optional&gt;
+            
+
+            
+
+            
+          </td>
+          
+
+          
+
+          <td class="description last">
+            <p>Right channel (stereo)</p>
+            
+          </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+  
+        
+<div class="param-desc">
+  <p>Returns a bunch of encoded frames</p>
+</div>
+
+
+
+<dl class="param-type">
+  <dt>
+    Type:
+  </dt>
+  <dd>
+    
+  <span class="param-type">
+    <code>
+      Uint8Array
+    </code>
+  </span>
+  
+
+
+  </dd>
+</dl>
+
+
+
+    
+</div>
+
+
+
+<div class="section-examples">
+  <h5>Example</h5>
+  
+  
+  <pre class="prettyprint"><code>import instantiate from '@etercast/mp3'
+
+const Encoder = await instantiate()
+const encoder = new Encoder({
+  sampleRate,
+  samples,
+  numChannels,
+  quality,
+  mode
+})
+encoder.encode(leftChannelData, rightChannelData)</code></pre>
+
+
+</div>
+
+</div>
+
+      
+    
+
+    
+    
+
+    
+  </article>
+
+</section>
+
+
+
+
+    </main>
+  </div>
+  <footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using <a href="https://github.com/etercast/jsdoc-template">Etercast Template</a>
+  </footer>
+</body>
+</html>

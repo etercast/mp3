@@ -1,0 +1,38 @@
+{
+  "name": "@etercast/mp3",
+  "version": "1.0.0",
+  "description": "Etercast MP3 encoder",
+  "main": "dist/mp3.js",
+  "module": "dist/mp3.mjs",
+  "browser": "dist/mp3.cjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "serve:examples": "cp dist/mp3.* ./examples && serve ./examples",
+    "serve:docs": "serve ./docs/@etercast/mp3/1.0.0/",
+    "build:emscripten": "docker run --rm -v $(pwd):/src -e EMCC_DEBUG=1 trzeci/emscripten-upstream:1.39.3 make",
+    "build:js": "cp src/mp3.js dist/mp3.mjs && babel src/mp3.js -o dist/mp3.cjs",
+    "build:docs": "jsdoc -c .jsdoc.json",
+    "build:examples": "cp dist/mp3.wasm examples && cp dist/mp3.js examples",
+    "build": "npm run build:emscripten && npm run build:js && npm run build:docs && npm run build:examples",
+    "docs": "npm run build:docs && npm run serve:docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mp3",
+    "lame",
+    "encoder"
+  ],
+  "author": "ROJO 2 <hola@rojo2.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@etercast/jsdoc-template": "^1.0.0",
+    "jsdoc": "^3.6.3",
+    "minami": "^1.2.3",
+    "serve": "^11.1.0"
+  }
+}

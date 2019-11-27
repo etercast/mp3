@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "source": {
+    "include": ["src", "README.md", "package.json"],
+    "includePattern": "\\.js$"
+  },
+  "opts": {
+    "template": "node_modules/@etercast/jsdoc-template",
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "package": "./package.json",
+    "readme": "./README.md"
+  }
+}
