@@ -1,10 +1,8 @@
 {
   "name": "@etercast/mp3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Etercast MP3 encoder",
   "main": "dist/mp3.js",
-  "module": "dist/mp3.mjs",
-  "browser": "dist/mp3.cjs",
   "files": [
     "dist"
   ],
@@ -24,7 +22,15 @@
     "lame",
     "encoder"
   ],
-  "author": "ROJO 2 <hola@rojo2.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etercast/mp3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/etercast/jsdoc-template/issues"
+  },
+  "homepage": "https://github.com/etercast/mp3",
+  "author": "ROJO 2 <hola@rojo2.com> (https://rojo2.com)",
   "license": "GPL-3.0",
   "devDependencies": {
     "@babel/cli": "^7.7.4",

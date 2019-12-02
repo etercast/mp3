@@ -4,20 +4,6 @@
 
 This repository contains part of the [Etercast](https://etercast.com) MP3 encoding library. It uses [LAME](https://lame.sourceforge.io/) and C/C++ -> WebAssembly compiler [Emscripten](https://emscripten.org).
 
-## How to build it
-
-If you have [Emscripten](https://emscripten.org) installed locally then you can run:
-
-```sh
-make
-```
-
-Otherwise you can use the [Docker](https://www.docker.com/) image by [trcezi](https://hub.docker.com/r/trzeci/emscripten) to build the MP3 encoder by executing:
-
-```sh
-npm run build:emscripten
-```
-
 ## How to use it
 
 ```javascript
@@ -57,6 +43,22 @@ const a = document.createElement('a')
 a.href = url
 a.download = 'audio.mp3'
 a.dispatchEvent(new MouseEvent('click'))
+```
+
+You need to copy `mp3.wasm` from `node_modules/@etercast/mp3/dist/mp3.wasm` into your `dist` or `public` folder.
+
+## How to build it
+
+If you have [Emscripten](https://emscripten.org) installed locally then you can run:
+
+```sh
+make
+```
+
+Otherwise you can use the [Docker](https://www.docker.com/) image by [trcezi](https://hub.docker.com/r/trzeci/emscripten) to build the MP3 encoder by executing:
+
+```sh
+npm run build:emscripten
 ```
 
 ## How to build documentation

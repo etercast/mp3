@@ -36,13 +36,6 @@
       <h1>Etercast MP3 Encoder</h1>
 <p><img src="https://etercast.com/images/og_landscape.jpg" alt="Etercast"></p>
 <p>This repository contains part of the <a href="https://etercast.com">Etercast</a> MP3 encoding library. It uses <a href="https://lame.sourceforge.io/">LAME</a> and C/C++ -&gt; WebAssembly compiler <a href="https://emscripten.org">Emscripten</a>.</p>
-<h2>How to build it</h2>
-<p>If you have <a href="https://emscripten.org">Emscripten</a> installed locally then you can run:</p>
-<pre class="prettyprint source lang-sh"><code>make
-</code></pre>
-<p>Otherwise you can use the <a href="https://www.docker.com/">Docker</a> image by <a href="https://hub.docker.com/r/trzeci/emscripten">trcezi</a> to build the MP3 encoder by executing:</p>
-<pre class="prettyprint source lang-sh"><code>npm run build:emscripten
-</code></pre>
 <h2>How to use it</h2>
 <pre class="prettyprint source lang-javascript"><code>import instantiate from '@etercast/mp3'
 
@@ -80,6 +73,16 @@ const a = document.createElement('a')
 a.href = url
 a.download = 'audio.mp3'
 a.dispatchEvent(new MouseEvent('click'))
+</code></pre>
+<p>You need to copy <code>mp3.wasm</code> from <code>node_modules/@etercast/mp3/dist/mp3.wasm</code> into your <code>dist</code> or <code>public</code> folder.</p>
+<p>If you're using <a href="https://webpack.js.org">webpack</a> you can use the
+<a href="https://webpack.js.org/plugins/copy-webpack-plugin/">CopyWebpackPlugin</a> or <a href="https://github.com/gajus/write-file-webpack-plugin">WriteFileWebpackPlugin</a> if you're using <a href="https://webpack.js.org/configuration/dev-server/">webpack-dev-server</a>.</p>
+<h2>How to build it</h2>
+<p>If you have <a href="https://emscripten.org">Emscripten</a> installed locally then you can run:</p>
+<pre class="prettyprint source lang-sh"><code>make
+</code></pre>
+<p>Otherwise you can use the <a href="https://www.docker.com/">Docker</a> image by <a href="https://hub.docker.com/r/trzeci/emscripten">trcezi</a> to build the MP3 encoder by executing:</p>
+<pre class="prettyprint source lang-sh"><code>npm run build:emscripten
 </code></pre>
 <h2>How to build documentation</h2>
 <p>Calling <code>npm run build</code> will build this documentation but if you want to build documentation specifically you can run:</p>
