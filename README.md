@@ -47,6 +47,26 @@ a.dispatchEvent(new MouseEvent('click'))
 
 You need to copy `mp3.wasm` from `node_modules/@etercast/mp3/dist/mp3.wasm` into your `dist` or `public` folder.
 
+### Parcel
+
+If you're using parcel you can achieve this by using the plugin `parcel-plugin-static-files-copy` and modifying
+your `package.json` to include this:
+
+```javascript
+"staticFiles": {
+  "staticPath": [
+    "node_modules/@etercast/mp3/dist"
+  ],
+  "excludeGlob": [
+    "*.{js,mjs,cjs}"
+  ]
+}
+``` 
+
+### Webpack
+
+TODO: Add webpack documentation
+
 ## How to build it
 
 If you have [Emscripten](https://emscripten.org) installed locally then you can run:
