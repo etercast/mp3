@@ -1,6 +1,6 @@
 {
   "name": "@etercast/mp3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Etercast MP3 encoder",
   "main": "dist/mp3.js",
   "files": [
